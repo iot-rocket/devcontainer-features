@@ -1,3 +1,4 @@
+
 # Codex CLI (codex)
 
 Installs OpenAI Codex CLI for local AI-powered coding assistance
@@ -6,7 +7,7 @@ Installs OpenAI Codex CLI for local AI-powered coding assistance
 
 ```json
 "features": {
-    "ghcr.io/tmaier/devcontainer-features/codex:1": {}
+    "ghcr.io/iot-rocket/devcontainer-features/codex:1": {}
 }
 ```
 
@@ -54,7 +55,6 @@ You'll need to sign in with a ChatGPT account (Plus, Pro, Team, Edu, or Enterpri
 
 For detailed documentation, see the [Codex CLI documentation](https://github.com/openai/codex).
 
-
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/tmaier/devcontainer-features/blob/main/src/codex/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/iot-rocket/devcontainer-features/blob/main/src/codex/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
