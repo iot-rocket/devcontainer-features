@@ -1,3 +1,4 @@
+
 # Gemini CLI (gemini-cli)
 
 Installs Google Gemini CLI for AI-powered development assistance
@@ -6,7 +7,7 @@ Installs Google Gemini CLI for AI-powered development assistance
 
 ```json
 "features": {
-    "ghcr.io/tmaier/devcontainer-features/gemini-cli:1": {}
+    "ghcr.io/iot-rocket/devcontainer-features/gemini-cli:1": {}
 }
 ```
 
@@ -54,7 +55,6 @@ You'll need to authenticate with Google AI Studio to access the Gemini API.
 
 For detailed documentation, see the [Gemini CLI documentation](https://github.com/google-gemini/gemini-cli).
 
-
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/tmaier/devcontainer-features/blob/main/src/gemini-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/iot-rocket/devcontainer-features/blob/main/src/gemini-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
