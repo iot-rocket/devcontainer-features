@@ -10,9 +10,11 @@ A collection of custom [Dev Container Features](https://containers.dev/implement
 | [chrome](https://github.com/tmaier/devcontainer-features/tree/main/src/chrome) | Google Chrome with container-optimized wrapper script | `ghcr.io/tmaier/devcontainer-features/chrome` |
 | [claude-code](https://github.com/tmaier/devcontainer-features/tree/main/src/claude-code) | Claude Code CLI for AI-powered development assistance | `ghcr.io/tmaier/devcontainer-features/claude-code` |
 | [codex](https://github.com/tmaier/devcontainer-features/tree/main/src/codex) | OpenAI Codex CLI for local AI-powered coding assistance | `ghcr.io/tmaier/devcontainer-features/codex` |
+| [gemini-cli](https://github.com/tmaier/devcontainer-features/tree/main/src/gemini-cli) | Google Gemini CLI for AI-powered development assistance | `ghcr.io/tmaier/devcontainer-features/gemini-cli` |
 | [imagemagick](https://github.com/tmaier/devcontainer-features/tree/main/src/imagemagick) | ImageMagick image processing library with PDF support | `ghcr.io/tmaier/devcontainer-features/imagemagick` |
 | [mc](https://github.com/tmaier/devcontainer-features/tree/main/src/mc) | MinIO Client for object storage operations | `ghcr.io/tmaier/devcontainer-features/mc` |
 | [mcp-language-server](https://github.com/tmaier/devcontainer-features/tree/main/src/mcp-language-server) | MCP Language Server for semantic code navigation | `ghcr.io/tmaier/devcontainer-features/mcp-language-server` |
+| [typst](https://github.com/tmaier/devcontainer-features/tree/main/src/typst) | Typst markup-based typesetting system | `ghcr.io/tmaier/devcontainer-features/typst` |
 | [yek](https://github.com/tmaier/devcontainer-features/tree/main/src/yek) | Repository file serialization tool for LLM consumption | `ghcr.io/tmaier/devcontainer-features/yek` |
 | [yq](https://github.com/tmaier/devcontainer-features/tree/main/src/yq) | YAML, JSON, XML, and CSV processor | `ghcr.io/tmaier/devcontainer-features/yq` |
 

@@ -17,9 +17,11 @@ jobs:
           - chrome
           - codex
           - color
+          - gemini-cli
           - hello
           - imagemagick
           - mc
+          - typst
           - yek
           - yq
         baseImage:
@@ -46,10 +48,12 @@ jobs:
           - claude-code
           - codex
           - color
+          - gemini-cli
           - hello
           - imagemagick
           - mc
           - mcp-language-server
+          - typst
           - yek
           - yq
     steps:
