@@ -7,7 +7,7 @@ Installs Typst - a markup-based typesetting system that is powerful and easy to 
 
 ```json
 "features": {
-    "ghcr.io/tmaier/devcontainer-features/typst:1": {}
+    "ghcr.io/iot-rocket/devcontainer-features/typst:1": {}
 }
 ```
 
@@ -27,4 +27,4 @@ For complete usage instructions and documentation, visit the official Typst webs
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/tmaier/devcontainer-features/blob/main/src/typst/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/iot-rocket/devcontainer-features/blob/main/src/typst/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._

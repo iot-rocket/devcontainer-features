@@ -156,7 +156,7 @@ Features are automatically published to GitHub Container Registry (GHCR) via Git
 ### Versioning
 - Features are individually versioned by the `version` attribute in `devcontainer-feature.json`
 - Features follow semver specification
-- Each feature is prefixed with `ghcr.io/tmaier/devcontainer-features` namespace
+- Each feature is prefixed with `ghcr.io/iot-rocket/devcontainer-features` namespace
 - A metadata package is also published containing information for feature discovery tools
 
 ### GitHub Actions Workflows
