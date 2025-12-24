@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-
 echo "Installing Claude Code..."
 
 # Check if Node.js is available
@@ -12,7 +11,6 @@ fi
 # Check Node.js version (requires 18+)
 NODE_VERSION=$(node --version | sed 's/v//')
 MAJOR_VERSION=$(echo $NODE_VERSION | cut -d. -f1)
-
 if [ "$MAJOR_VERSION" -lt 18 ]; then
     echo "Error: Node.js 18+ is required, but found version $NODE_VERSION"
     exit 1
@@ -29,16 +27,37 @@ if [ -n "$_REMOTE_USER" ] && [ "$_REMOTE_USER" != "root" ]; then
     echo "Installing Claude Code as user: $_REMOTE_USER"
     NPM_PATH=$(which npm)
     BIN_DIR=$(dirname "$NPM_PATH")
-    su "$_REMOTE_USER" -c "PATH=$BIN_DIR:\$PATH $NPM_PATH install -g @anthropic-ai/claude-code"
+    
+    # Install to user's home directory
+    su "$_REMOTE_USER" -c "PATH=$BIN_DIR:\$PATH $NPM_PATH install -g --prefix ~/.local @anthropic-ai/claude-code"
+    
+    # Add to PATH in common shell configs if not already there
+    for rc_file in ".bashrc" ".zshrc" ".profile"; do
+        rc_path="/home/$_REMOTE_USER/$rc_file"
+        if [ -f "$rc_path" ]; then
+            if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' "$rc_path"; then
+                su "$_REMOTE_USER" -c "echo 'export PATH=\"\$HOME/.local/bin:\$PATH\"' >> $rc_path"
+            fi
+        fi
+    done
+    
+    # Verify installation
+    if [ ! -f "/home/$_REMOTE_USER/.local/bin/claude" ]; then
+        echo "Error: Claude Code installation failed - executable not found"
+        exit 1
+    fi
+    
+    echo "Claude Code installed successfully at ~/.local/bin/claude"
+    echo "The PATH has been updated in your shell config. Restart your shell or run: export PATH=\"\$HOME/.local/bin:\$PATH\""
 else
     echo "Installing Claude Code globally as root"
     npm install -g @anthropic-ai/claude-code
+    
+    # Verify installation
+    if ! command -v claude &> /dev/null; then
+        echo "Error: Claude Code installation failed"
+        exit 1
+    fi
+    
+    echo "Claude Code installed successfully!"
 fi
-
-# Verify installation
-if ! command -v claude &> /dev/null; then
-    echo "Error: Claude Code installation failed"
-    exit 1
-fi
-
-echo "Claude Code installed successfully!"
