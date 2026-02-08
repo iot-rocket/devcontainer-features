@@ -1,26 +1,22 @@
 {
-    "claude_code_with_node_feature": {
+    "claude_code_default": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "ghcr.io/devcontainers/features/node:1": {
-                "version": "lts"
-            },
             "claude-code": {}
         }
     },
-    "claude_code_with_node_image": {
-        "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+    "claude_code_stable": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "claude-code": {}
+            "claude-code": {
+                "version": "stable"
+            }
         }
     },
     "claude_code_with_custom_user": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "remoteUser": "vscode",
         "features": {
-            "ghcr.io/devcontainers/features/node:1": {
-                "version": "lts"
-            },
             "claude-code": {}
         }
     }
