@@ -1,12 +1,17 @@
 #!/bin/bash
 set -e
+export DEBIAN_FRONTEND=noninteractive
 
 echo "Installing Gemini CLI..."
 
-# Check if Node.js is available
+# Install Node.js if not available
 if ! command -v node &> /dev/null; then
-    echo "Error: Node.js is required but not found. Please ensure the Node.js feature is installed."
-    exit 1
+    echo "Node.js not found. Installing Node.js 20.x via NodeSource..."
+    apt-get update -y
+    apt-get install -y --no-install-recommends curl ca-certificates
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+    apt-get install -y --no-install-recommends nodejs
+    rm -rf /var/lib/apt/lists/*
 fi
 
 # Check Node.js version (requires 18+)

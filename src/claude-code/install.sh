@@ -1,12 +1,21 @@
 #!/bin/bash
 set -e
+export DEBIAN_FRONTEND=noninteractive
 echo "Installing Claude Code..."
 
-# Ensure curl is available
+# Ensure curl and other dependencies are available
 if ! command -v curl &> /dev/null; then
     echo "curl not found, installing..."
     apt-get update -y
     apt-get install -y --no-install-recommends curl ca-certificates
+    rm -rf /var/lib/apt/lists/*
+fi
+
+# Ensure tar and gzip are available (needed by the installer)
+if ! command -v tar &> /dev/null || ! command -v gzip &> /dev/null; then
+    echo "Installing archive utilities..."
+    apt-get update -y
+    apt-get install -y --no-install-recommends tar gzip
     rm -rf /var/lib/apt/lists/*
 fi
 
